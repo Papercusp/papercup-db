@@ -1,5 +1,5 @@
 /**
- * @restart/papercup-db — Papercup-specific Drizzle schemas.
+ * @papercusp/papercup-db — Papercup-specific Drizzle schemas.
  *
  * The Papercup demo (5-department fictional org with cross-dept message bus)
  * extends the Papercusp framework with its own Postgres tables. These tables
@@ -7,7 +7,7 @@
  * `harness_shared` schema (which holds projects, audit_log, and the per-harness
  * UNION views).
  *
- * Connection happens via the framework's clients in @restart/db-org —
+ * Connection happens via the framework's clients in @papercusp/db-org —
  * those clients have `papercup_shared` in their search_path so unqualified
  * references resolve correctly. Code that wants Drizzle ORM access to the
  * Papercup tables imports them from this module.
