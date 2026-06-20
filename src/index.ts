@@ -1,5 +1,5 @@
 /**
- * @papercusp/papercup-db — Papercup-specific Drizzle schemas.
+ * @papercusp/papercusp-db — Papercup-specific Drizzle schemas.
  *
  * The Papercup demo (5-department fictional org with cross-dept message bus)
  * extends the Papercusp framework with its own Postgres tables. These tables
@@ -12,7 +12,7 @@
  * references resolve correctly. Code that wants Drizzle ORM access to the
  * Papercup tables imports them from this module.
  *
- * DDL: see ../db-org/sql/003-papercup-shared.sql for the canonical CREATE TABLEs.
+ * DDL: see ../db-org/sql/003-papercusp-shared.sql for the canonical CREATE TABLEs.
  */
 import { pgSchema, text, bigint, jsonb, primaryKey, index } from 'drizzle-orm/pg-core';
 
