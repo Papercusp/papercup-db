@@ -3,12 +3,12 @@
  *
  * The Papercup demo (5-department fictional org with cross-dept message bus)
  * extends the Papercusp framework with its own Postgres tables. These tables
- * live in the `papercup_shared` Postgres schema, separate from the framework's
+ * live in the `papercusp_shared` Postgres schema, separate from the framework's
  * `harness_shared` schema (which holds projects, audit_log, and the per-harness
  * UNION views).
  *
  * Connection happens via the framework's clients in @papercusp/db-org —
- * those clients have `papercup_shared` in their search_path so unqualified
+ * those clients have `papercusp_shared` in their search_path so unqualified
  * references resolve correctly. Code that wants Drizzle ORM access to the
  * Papercup tables imports them from this module.
  *
@@ -16,7 +16,7 @@
  */
 import { pgSchema, text, bigint, jsonb, primaryKey, index } from 'drizzle-orm/pg-core';
 
-export const papercupShared = pgSchema('papercup_shared');
+export const papercupShared = pgSchema('papercusp_shared');
 
 export const messages = papercupShared.table('messages', {
   id: text('id').primaryKey(),
